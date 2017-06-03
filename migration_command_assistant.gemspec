@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["yukimura1227"]
   spec.email         = ["takamura1227@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'assistant for assemble command like [rails generate migration XXX]'
+  spec.description   = 'assistant for assemble command like [rails generate migration XXX]'
+  spec.homepage      = 'https://github.com/yukimura1227/migration_command_assistant'
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
