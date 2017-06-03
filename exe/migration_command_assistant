@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-require "migration_command_assistant"
+require 'migration_command_assistant'
+
+MigrationCommandAssistant.main
