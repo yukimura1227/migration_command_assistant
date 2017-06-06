@@ -6,19 +6,34 @@ require 'active_support/core_ext'
 # migration command assistant
 module MigrationCommandAssistant
   ADD_COLUMN = '1'.freeze
+  DROP_TABLE = '2'.freeze
   QUIT = 'q'.freeze
   def self.main
     puts 'what you want?'
     loop do
-      puts "[#{ADD_COLUMN}] add column [#{QUIT}] quit"
+      puts "[#{ADD_COLUMN}] add column " \
+        "[#{DROP_TABLE}] drop table " \
+        "[#{QUIT}] quit"
       case gets.chomp
       when ADD_COLUMN
         add_column
+        exit 0
+      when DROP_TABLE
+        drop_table
         exit 0
       when QUIT
         exit 0
       end
     end
+  end
+
+  def self.drop_table
+    puts 'table name?'
+    table_name = gets.chomp
+    put_line
+    puts 'rails generate migration ' \
+      "Drop#{table_name.classify}"
+    put_line
   end
 
   def self.add_column
