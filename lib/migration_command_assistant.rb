@@ -5,15 +5,17 @@ require 'active_support/core_ext'
 
 # migration command assistant
 module MigrationCommandAssistant
+  ADD_COLUMN = '1'.freeze
+  QUIT = 'q'.freeze
   def self.main
     puts 'what you want?'
     loop do
-      puts '[1] add column [q] quit'
+      puts "[#{ADD_COLUMN}] add column [#{QUIT}] quit"
       case gets.chomp
-      when '1'
+      when ADD_COLUMN
         add_column
         exit 0
-      when 'q'
+      when QUIT
         exit 0
       end
     end
