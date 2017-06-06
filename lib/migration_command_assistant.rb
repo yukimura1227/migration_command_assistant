@@ -52,7 +52,8 @@ module MigrationCommandAssistant
 
     put_line
     puts 'rails generate migration ' \
-      "Add#{ column_name.classify }To#{ table_name.classify } #{ column_name }:#{ column_type }"
+      "Add#{column_name.classify}To#{table_name.classify} " \
+      "#{column_name}:#{column_type}"
     put_line
   end
 
@@ -66,7 +67,8 @@ module MigrationCommandAssistant
     column_type = gets.chomp
     put_line
     puts 'rails generate migration ' \
-      "Removel#{ column_name.classify }From#{ table_name.classify } #{ column_name }:#{ column_type }"
+      "Removel#{column_name.classify}From#{table_name.classify} " \
+      "#{column_name}:#{column_type}"
     put_line
   end
 
